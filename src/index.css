@@ -1,3 +1,83 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.containerb {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.mySwiper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+  display: flex;
+}
+.mySwiper .swiper-wrapper {
+  display: flex;
+}
+.mySwiper .swiper-button-prev {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  bottom: 30px;
+  border-radius: 50%;
+  background-image: url(./assets/arrowBlack.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  left: 80px;
+  background-color: white;
+  border-radius: 50%;
+  transform: rotate(180deg);
+}
+.mySwiper .swiper-button-next {
+  width: 70px;
+  height: 70px;
+  left: 180px;
+  border-radius: 50%;
+  background-image: url(./assets/arrowBlack.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  bottom: 30px;
+  background-color: white;
+}
+.mySwiper .swiper-button-disabled{
+  background-color: rgb(225, 225, 225)
+}
+
+.mySwiper .swiper-pagination {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+.mySwiper .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  border-radius: 50%;
+  height: 10px;
+  background-color: rgb(225, 223, 223);
+}
+.mySwiper .swiper-pagination .swiper-pagination-bullet-active {
+  width: 10px;
+  border-radius: 50%;
+  height: 10px;
+  transform: scale(1.5);
+  background-color: white;
+}
+
+@font-face {
+  font-family: roboto;
+  src: url(./fontFamily/Roboto-Medium.ttf);
+}
+
+.roboto {
+  font-family: roboto;
+}
