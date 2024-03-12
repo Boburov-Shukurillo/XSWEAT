@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
 .containerb {
   width: 100%;
   max-width: 1440px;
@@ -48,8 +52,8 @@
   background-color: white;
 }
 
-.mySwiper .swiper-button-disabled{
-  background-color: rgb(225, 225, 225)
+.mySwiper .swiper-button-disabled {
+  background-color: rgb(225, 225, 225);
 }
 
 .mySwiper .swiper-pagination {
@@ -78,9 +82,26 @@
 
 @font-face {
   font-family: roboto;
-  src: url(./fontFamily/Roboto-Medium.ttf);
+  src: url(./fontFamily/RFDewiExpanded-Bold.ttf);
 }
 
 .roboto {
   font-family: roboto;
+}
+
+.hero {
+  background-image: url(./assets/HeroSlideImg.jpeg);
+}
+
+.detailSwiper {
+  width: 100%;
+  padding: 40px 10px;
+  position: relative;
+  overflow: hidden;
+  height: 550px;
+  display: flex;
+}
+
+.detailSwiper .swiper-wrapper {
+  display: flex;
 }

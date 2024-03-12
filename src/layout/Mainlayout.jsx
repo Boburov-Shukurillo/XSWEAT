@@ -2,10 +2,10 @@ import React from 'react'
 import Header from '../components/Header'
 import { Outlet } from 'react-router-dom'
 
-const Mainlayout = () => {
+const Mainlayout = ({filterProduct,setFilterProduct}) => {
   return (
     <>
-    <Header/>
+    <Header filterProduct={filterProduct} setFilterProduct={setFilterProduct}/>
     <Outlet/>
     </>
   )

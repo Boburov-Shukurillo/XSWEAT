@@ -8,6 +8,7 @@ export default {
         ligthGray: "#8C8F96",
         blue: "#49D0FF",
         textGray: "#3C3C3C80",
+        opacityWhite: "#FFFFFF1C",
       },
       fontSize: {
         51: "51px",
@@ -18,9 +19,9 @@ export default {
         "hero-pattern": "url('./src/assets/HeroSlideImg.jpeg')",
         "hero-patern2": "url('./src/assets/xSweat.png')",
       },
-      lineHeight:{
-        "05":"0.9"
-      }
+      lineHeight: {
+        "05": "0.9",
+      },
     },
   },
   plugins: [],
