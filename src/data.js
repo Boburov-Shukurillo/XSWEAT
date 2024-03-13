@@ -1,4 +1,4 @@
-import { v1 as futureId } from "uuid";
+import { v4 as futureId } from "uuid";
 import shoe1 from "./assets/dataImg/shoe (1).png";
 import shoe2 from "./assets/dataImg/shoe (2).png";
 import shoe3 from "./assets/dataImg/shoe (3).png";
@@ -19,7 +19,7 @@ import shoe17 from "./assets/dataImg/shoe (17).png";
 import shoe18 from "./assets/dataImg/shoe (18).png";
 import shoe19 from "./assets/dataImg/shoe (19).png";
 
-export const data = [
+export const Products = [
   [
     {
       id: futureId(),
