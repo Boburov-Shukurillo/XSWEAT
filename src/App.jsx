@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Route,
   RouterProvider,
@@ -9,17 +9,24 @@ import Mainlayout from "./layout/Mainlayout";
 import Home from "./pages/Home";
 import { Products } from "./data";
 import Cart from "./pages/Cart";
-
+import Detail from "./pages/Detail";
 const App = () => {
   const [PrductData, setProductData] = useState([...Products]);
   const [cart, setCart] = useState([]);
-
-  console.log(cart);
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route element={<Mainlayout />}>
+      <Route
+        element={
+          <Mainlayout
+            cart={cart}
+            setCart={setCart}
+            PrductData={PrductData}
+            setProductData={setProductData}
+          />
+        }
+      >
         <Route
-          index
+          path="/"
           element={
             <Home
               cart={cart}
@@ -33,6 +40,18 @@ const App = () => {
           path="/cart"
           element={
             <Cart
+              cart={cart}
+              setCart={setCart}
+              PrductData={PrductData}
+              setProductData={setProductData}
+            />
+          }
+        />
+
+        <Route
+          path="/product/:id"
+          element={
+            <Detail
               cart={cart}
               setCart={setCart}
               PrductData={PrductData}

@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-const Cart = ({ cart, PrductData }) => {
+const Cart = ({ cart, setCart, PrductData }) => {
   return (
     <div>
       {PrductData.map((b) => {
         return b.map((e) => {
-          return (
-            <li key={e.name}>
-              <img src={e.img} alt="" />
-              <h3>{e.size}</h3>
-            </li>
-          );
+          if (e.isCart === true) {
+            useEffect(() => {
+              setCart((v) => {
+                return [...v, e];
+              });
+            }, []);
+            return (
+              <li key={e.name}>
+                <img src={e.img} alt="" />
+                <h3>{e.size}</h3>
+              </li>
+            );
+          }
         });
       })}
     </div>
